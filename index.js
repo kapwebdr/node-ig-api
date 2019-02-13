@@ -845,7 +845,7 @@ function histPrc(epic, resolution, from, to) {
 	 */
 
 	return new Promise((res, rej) => {
-		get('/prices/' + epic + '?resolution=' + resolution + '&startdate=' + from + '&to=' + to, 3)
+		get('/prices/' + epic + '?resolution=' + resolution + '&from=' + from + '&to=' + to, 3)
 			.then(r => {
 				if (r.status !== 200) {
 					rej(r);
